@@ -25,12 +25,13 @@
       </div>
 
       <!-- Search Bar -->
-      <form class="d-flex ms-auto me-3" role="search">
-        <input 
-          class="form-control me-2 search-inp" 
-          type="search" 
-          placeholder="Search destinations"
-        >
+      <form class="d-flex ms-auto me-3" role="search" action="/listings/search" method="GET">
+       <input 
+         class="form-control me-2 search-inp" 
+         type="search" 
+         placeholder="Search destinations"
+         name="q"
+>
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -38,12 +39,12 @@
 
       <!-- Login / Logout -->
       <div class="navbar-nav">
-        <% if(!currUser) { %>
+        <% if(!locals.currUser) { %>
           <a class="nav-link" href="/signup">Sign up</a>
           <a class="nav-link" href="/login">Log in</a>
         <% } %>
 
-        <% if(currUser) { %>
+        <% if(!locals.currUser) { %>
           <a class="nav-link" href="/logout">Log out</a>
         <% } %>
       </div>
