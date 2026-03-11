@@ -13,7 +13,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 
 const session = require("express-session");
-const MongoStore = require("connect-mongo");   // ✅ correct import
+const MongoStore = require("connect-mongo");   
 
 const flash = require("connect-flash");
 const passport = require("passport");
@@ -49,7 +49,7 @@ app.engine("ejs",ejsMate);
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
-app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname,"public")));
 
 
 /* ================= SESSION STORE ================= */
