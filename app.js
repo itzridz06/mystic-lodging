@@ -56,14 +56,8 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 const store = MongoStore.create({
   mongoUrl: process.env.ATLASDB_URL,
-  mongoOptions: {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  crypto: {
-    secret: process.env.SESSION_SECRET,
-  },
-  touchAfter: 24 * 3600,
+  ttl: 14 * 24 * 60 * 60, // session lifetime (14 days)
+  autoRemove: "native"
 });
 
 store.on("error", (err) => {
@@ -73,15 +67,15 @@ store.on("error", (err) => {
 
 const sessionOptions = {
   store,
-  secret:"mysupersecretcode",
+  secret: process.env.SESSION_SECRET,
   resave:false,
-  saveUninitialized:true,
+  saveUninitialized:false,
   cookie:{
-  expires:Date.now()+7*24*60*60*1000,
-  maxAge:7*24*60*60*1000,
-  httpOnly:true,
-  secure: true
-}
+    expires:Date.now()+7*24*60*60*1000,
+    maxAge:7*24*60*60*1000,
+    httpOnly:true,
+    secure:true
+  }
 };
 
 app.use(session(sessionOptions));
