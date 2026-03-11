@@ -37,7 +37,7 @@ mongoose.connect(dbUrl)
     console.log("Connected to Atlas DB");
 })
 .catch((err)=>{
-    console.log(err);
+    console.log("MongoDB connection error:", err);
 });
 
 
@@ -55,9 +55,13 @@ app.use(express.static(path.join(__dirname,"/public")));
 /* ================= SESSION STORE ================= */
 
 const store = MongoStore.create({
-  mongoUrl: dbUrl,
+  mongoUrl: process.env.ATLASDB_URL,
+  mongoOptions: {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
   crypto: {
-    secret: "mysupersecretcode",
+    secret: process.env.SESSION_SECRET,
   },
   touchAfter: 24 * 3600,
 });
@@ -73,10 +77,11 @@ const sessionOptions = {
   resave:false,
   saveUninitialized:true,
   cookie:{
-    expires:Date.now()+7*24*60*60*1000,
-    maxAge:7*24*60*60*1000,
-    httpOnly:true,
-  }
+  expires:Date.now()+7*24*60*60*1000,
+  maxAge:7*24*60*60*1000,
+  httpOnly:true,
+  secure: true
+}
 };
 
 app.use(session(sessionOptions));
