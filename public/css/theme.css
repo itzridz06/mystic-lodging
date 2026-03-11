@@ -1,29 +1,36 @@
-/* Default Theme */
+/* DEFAULT THEME */
 body.default {
   background-color: #ffffff;
   color: #000;
 }
 
-/* Gryffindor Theme */
+/* GRYFFINDOR */
 body.gryffindor {
   background-color: #7f0909;
   color: #ffc500;
 }
 
-/* Slytherin Theme */
+/* SLYTHERIN */
 body.slytherin {
   background-color: #1a472a;
-  color: #aaaaaa;
+  color: #e1ffe1;
 }
 
-/* Ravenclaw Theme */
+/* RAVENCLAW */
 body.ravenclaw {
   background-color: #0e1a40;
-  color: #946b2d;
+  color: #d4af37;
 }
 
-/* Hufflepuff Theme */
+/* HUFFLEPUFF */
 body.hufflepuff {
   background-color: #ecb939;
   color: #000;
+}
+
+/* Make cards visible on dark themes */
+body.gryffindor .card,
+body.slytherin .card,
+body.ravenclaw .card {
+  background-color: white;
 }
