@@ -1,0 +1,29 @@
+/* Default Theme */
+body.default {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Gryffindor Theme */
+body.gryffindor {
+  background-color: #7f0909;
+  color: #ffc500;
+}
+
+/* Slytherin Theme */
+body.slytherin {
+  background-color: #1a472a;
+  color: #aaaaaa;
+}
+
+/* Ravenclaw Theme */
+body.ravenclaw {
+  background-color: #0e1a40;
+  color: #946b2d;
+}
+
+/* Hufflepuff Theme */
+body.hufflepuff {
+  background-color: #ecb939;
+  color: #000;
+}
