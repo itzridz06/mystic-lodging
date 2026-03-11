@@ -1,36 +1,45 @@
-/* DEFAULT THEME */
-body.default {
-  background-color: #ffffff;
-  color: #000;
+/* DEFAULT */
+body.default{
+  background:#ffffff;
+  color:#000;
 }
 
 /* GRYFFINDOR */
-body.gryffindor {
-  background-color: #7f0909;
-  color: #ffc500;
+body.gryffindor{
+  background:#7f0909 !important;
+  color:#ffc500;
 }
 
 /* SLYTHERIN */
-body.slytherin {
-  background-color: #1a472a;
-  color: #e1ffe1;
+body.slytherin{
+  background:#1a472a !important;
+  color:#e1ffe1;
 }
 
 /* RAVENCLAW */
-body.ravenclaw {
-  background-color: #0e1a40;
-  color: #d4af37;
+body.ravenclaw{
+  background:#0e1a40 !important;
+  color:#d4af37;
 }
 
 /* HUFFLEPUFF */
-body.hufflepuff {
-  background-color: #ecb939;
-  color: #000;
+body.hufflepuff{
+  background:#ecb939 !important;
+  color:#000;
 }
 
-/* Make cards visible on dark themes */
+/* Fix Bootstrap containers */
+body.gryffindor .container,
+body.slytherin .container,
+body.ravenclaw .container,
+body.hufflepuff .container{
+  background:transparent;
+}
+
+/* Cards stay readable */
 body.gryffindor .card,
 body.slytherin .card,
-body.ravenclaw .card {
-  background-color: white;
+body.ravenclaw .card{
+  background:white;
+  color:black;
 }
