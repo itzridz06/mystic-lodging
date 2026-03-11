@@ -1,214 +1,247 @@
+/* GLOBAL */
+
 body {
-    font-family: "Plus Jakarta Sans", sans-serif !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.container{
-    flex:1;
-}
- .navbar{
-    height: 5rem;
-    background-color: white;
- }
- .fa-compass{
-    color:#fe424d ;
-    font-size: 2rem;
- }
- .nav-link{
-    color: #222222 !important;
- }
-
- /* FOOTER */
- .f-info-links a{
-text-decoration: none;
-color: #222222;
-margin-right: 0.5rem;
- }
-
- .f-info-links a:hover{
-text-decoration: underline;
- }
- .f-info-links, .f-info-socials, .f-info-brand{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- .f-info-socials i{
-    font-size: 1.5rem;
-    margin-right: 1rem;
- }
- .f-info {
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
- }
-
- /* Cards */
- .listing-card {
-    border: none !important;
-    margin-bottom: 2rem;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.card-img-top {
-    border-radius: 1rem !important;
-    width: 100% !important;
-    height: 15rem;
-    object-fit: cover !important;
+.container {
+  flex: 1;
 }
 
-.card-body {
-    padding: 0 !important;
+/* NAVBAR */
+
+.navbar {
+  height: 5rem;
+  background-color: white;
 }
 
-.card-text {
-    font-size: 0.95rem;
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
 }
 
-.card-text p {
-    font-weight: 400 !important;
+.nav-link {
+  color: #222222 !important;
 }
 
-.listing-link{
-    text-decoration: none;
+/* SEARCH BAR */
+
+.search-bar {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 4px 8px;
+  background: white;
+  align-items: center;
 }
 
-/* Card Effect */
-.card-img-overlay{
-    opacity:0;
+.search-inp {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 0.9rem;
 }
 
-.card-img-overlay:hover{
-    opacity:0.2;
-    background-color: white;
-}
-/* New Page */
-.add-btn{
-    background-color:#fe424d ;
-    border: none !important;
+.search-inp:focus {
+  box-shadow: none;
 }
 
-/* Edit Page */
-.edit-btn{
-    background-color:#fe424d ;
-    border: none !important;
+.search-btn {
+  background-color: #fe424d;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 10px;
+  border: none;
 }
 
-/* Show Page */
-.show-img{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
+.search-btn:hover {
+  background-color: #e31c5f;
 }
 
-.btns{
-   display: flex;
+/* FOOTER */
 
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.show-card{
-    border: none !important;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.review-cb {
-    padding: 0.7rem !important;
-}
-
-#map {
-  height: 400px;
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
   width: 100%;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+  margin-right: 0.5rem;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-socials i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* FILTERS */
 
 .filters {
   display: flex;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .filter {
+  text-align: center;
   opacity: 0.7;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .filter:hover {
   opacity: 1;
+  transform: scale(1.05);
 }
+
+.filter i {
+  font-size: 20px;
+}
+
+.filter p {
+  font-size: 0.8rem;
+}
+
+/* TAX TOGGLE */
 
 .tax-toggle {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-/* Listing Card Styling */
+.form-check-input {
+  width: 40px;
+  height: 20px;
+}
+
+.form-check-input:checked {
+  background-color: #fe424d;
+  border-color: #fe424d;
+}
+
+/* LISTING CARDS */
 
 .listing-card {
+  border: none !important;
   border-radius: 16px;
-  overflow: hidden;
   background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px;             /* white space inside card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
-  padding:10px;
 }
 
 .listing-card:hover {
   transform: translateY(-5px);
 }
 
-.listing-card img {
+/* IMAGE INSIDE CARD */
+
+.card-img-top {
   width: 100%;
-  height: 260px;
+  height: 220px;             /* smaller height */
   object-fit: cover;
-  border-radius: 12px;;
+  border-radius: 12px;
 }
+
+/* TEXT AREA */
 
 .card-body {
-  padding: 16px;
+  padding: 10px 5px 5px 5px !important;
 }
 
-.listings-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 28px;
+.card-text {
+  font-size: 0.95rem;
 }
 
-/* Search Bar */
-
-.search-bar{
-  border:1px solid #ddd;
-  border-radius:25px;
-  padding:4px 8px;
-  background:white;
-  align-items:center;
+.card-text p {
+  font-weight: 400 !important;
 }
 
-.search-inp{
-  border:none;
-  outline:none;
-  box-shadow:none;
-  font-size:0.9rem;
+/* REMOVE LINK STYLE */
+
+.listing-link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.search-inp:focus{
-  box-shadow:none;
+/* IMAGE OVERLAY EFFECT */
+
+.card-img-overlay {
+  opacity: 0;
 }
 
-.search-btn{
-  background-color:#fe424d;
-  color:white;
-  border-radius:50%;
-  padding:8px 10px;
-  border:none;
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
 }
 
-.search-btn:hover{
-  background-color:#e31c5f;
+/* ADD LISTING BUTTON */
+
+.add-btn {
+  background-color: #fe424d;
+  border: none !important;
+}
+
+/* EDIT BUTTON */
+
+.edit-btn {
+  background-color: #fe424d;
+  border: none !important;
+}
+
+/* SHOW PAGE */
+
+.show-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.show-card {
+  border: none !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btns {
+  display: flex;
+}
+
+/* REVIEW BOX */
+
+.review-cb {
+  padding: 0.7rem !important;
+}
+
+/* MAP */
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
 }
