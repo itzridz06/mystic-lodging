@@ -28,18 +28,23 @@ const userRouter = require("./routes/user.js");
 /* ================= DATABASE CONNECTION ================= */
 
 const dbUrl = process.env.ATLASDB_URL;
-if(!dbUrl){
-  console.log("ATLASDB_URL not found");
+
+async function main() {
+  await mongoose.connect(dbUrl);
 }
 
-mongoose.connect(dbUrl)
-.then(()=>{
+main()
+  .then(() => {
     console.log("Connected to Atlas DB");
-})
-.catch((err)=>{
-    console.log("MongoDB connection error:", err);
-});
 
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
+
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 /* ================= EXPRESS CONFIG ================= */
 
