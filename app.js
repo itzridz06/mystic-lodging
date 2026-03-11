@@ -28,6 +28,9 @@ const userRouter = require("./routes/user.js");
 /* ================= DATABASE CONNECTION ================= */
 
 const dbUrl = process.env.ATLASDB_URL;
+if(!dbUrl){
+  console.log("ATLASDB_URL not found");
+}
 
 mongoose.connect(dbUrl)
 .then(()=>{
@@ -52,7 +55,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 /* ================= SESSION STORE ================= */
 
 const store = MongoStore.create({
-  mongoUrl: process.env.ATLASDB_URL,
+  mongoUrl: dbUrl,
   crypto: {
     secret: "mysupersecretcode",
   },
