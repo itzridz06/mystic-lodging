@@ -5,7 +5,17 @@ const mapToken = process.env.MAP_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
+
+  let { category } = req.query;
+
+  let allListings;
+
+  if(category){
+    allListings = await Listing.find({ category });
+  } else {
+    allListings = await Listing.find({});
+  }
+
   res.render("listings/index", { allListings });
 };
 
@@ -23,6 +33,8 @@ module.exports.createListing = async (req, res) => {
   const newListing = new Listing(req.body.listing);
 
   newListing.owner = req.user._id;
+
+  newListing.category = req.body.listing.category;
 
   newListing.image = {
     url: req.file.path,

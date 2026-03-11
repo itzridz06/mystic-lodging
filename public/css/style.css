@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* ================= GLOBAL ================= */
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -11,7 +11,7 @@ body {
   flex: 1;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 .navbar {
   height: 5rem;
@@ -27,7 +27,7 @@ body {
   color: #222222 !important;
 }
 
-/* SEARCH BAR */
+/* ================= SEARCH BAR ================= */
 
 .search-bar {
   border: 1px solid #ddd;
@@ -60,7 +60,7 @@ body {
   background-color: #e31c5f;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .f-info {
   text-align: center;
@@ -96,7 +96,7 @@ body {
   margin-right: 1rem;
 }
 
-/* FILTERS */
+/* ================= FILTERS ================= */
 
 .filters {
   display: flex;
@@ -104,16 +104,16 @@ body {
   margin-bottom: 1rem;
 }
 
-.filter {
-  text-align: center;
-  opacity: 0.7;
-  cursor: pointer;
-  transition: 0.2s;
+.filter{
+  text-decoration:none;
+  color:inherit;
+  opacity:0.7;
+  transition:0.2s;
 }
 
-.filter:hover {
-  opacity: 1;
-  transform: scale(1.05);
+.filter:hover{
+  opacity:1;
+  transform:scale(1.05);
 }
 
 .filter i {
@@ -124,7 +124,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* TAX TOGGLE */
+/* ================= TAX TOGGLE ================= */
 
 .tax-toggle {
   display: flex;
@@ -143,13 +143,13 @@ body {
   border-color: #fe424d;
 }
 
-/* LISTING CARDS */
+/* ================= LISTING CARDS ================= */
 
 .listing-card {
   border: none !important;
   border-radius: 16px;
   background: white;
-  padding: 12px;             /* white space inside card */
+  padding: 12px; /* space inside card */
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
 }
@@ -158,16 +158,16 @@ body {
   transform: translateY(-5px);
 }
 
-/* IMAGE INSIDE CARD */
+/* Image inside card */
 
 .card-img-top {
   width: 100%;
-  height: 220px;             /* smaller height */
+  height: 220px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-/* TEXT AREA */
+/* Text area */
 
 .card-body {
   padding: 10px 5px 5px 5px !important;
@@ -181,14 +181,12 @@ body {
   font-weight: 400 !important;
 }
 
-/* REMOVE LINK STYLE */
-
 .listing-link {
   text-decoration: none;
   color: inherit;
 }
 
-/* IMAGE OVERLAY EFFECT */
+/* ================= CARD HOVER EFFECT ================= */
 
 .card-img-overlay {
   opacity: 0;
@@ -199,21 +197,21 @@ body {
   background-color: white;
 }
 
-/* ADD LISTING BUTTON */
+/* ================= ADD / EDIT BUTTONS ================= */
 
 .add-btn {
   background-color: #fe424d;
   border: none !important;
+  border-radius: 10px;
 }
-
-/* EDIT BUTTON */
 
 .edit-btn {
   background-color: #fe424d;
   border: none !important;
+  border-radius: 10px;
 }
 
-/* SHOW PAGE */
+/* ================= SHOW PAGE ================= */
 
 .show-img {
   height: 300px;
@@ -228,17 +226,27 @@ body {
   padding-right: 0;
 }
 
+/* Buttons container */
+
 .btns {
   display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-/* REVIEW BOX */
+/* Delete button fix */
+
+.btn-dark {
+  border-radius: 10px;
+}
+
+/* ================= REVIEW BOX ================= */
 
 .review-cb {
   padding: 0.7rem !important;
 }
 
-/* MAP */
+/* ================= MAP ================= */
 
 #map {
   height: 400px;

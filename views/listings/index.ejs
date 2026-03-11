@@ -7,47 +7,52 @@
 <!-- Filters -->
 <div class="filters d-flex justify-content-between mb-4">
 
-  <div class="filter text-center">
+  <a href="/listings?category=rooms" class="filter text-center">
     <i class="fa-solid fa-house"></i>
     <p>Rooms</p>
-  </div>
+  </a>
 
-  <div class="filter text-center">
+  <a href="/listings?category=mountains" class="filter text-center">
     <i class="fa-solid fa-mountain"></i>
     <p>Mountains</p>
-  </div>
+  </a>
 
-  <div class="filter text-center">
+  <a href="/listings?category=beach" class="filter text-center">
     <i class="fa-solid fa-water"></i>
     <p>Beach</p>
-  </div>
+  </a>
 
-  <div class="filter text-center">
+  <a href="/listings?category=camping" class="filter text-center">
     <i class="fa-solid fa-tree"></i>
     <p>Camping</p>
-  </div>
+  </a>
 
-  <div class="filter text-center">
+  <a href="/listings?category=city" class="filter text-center">
     <i class="fa-solid fa-building"></i>
     <p>City</p>
-  </div>
+  </a>
 
 </div>
+
 
 <!-- Tax Toggle -->
 <div class="tax-toggle mb-3">
   <div class="form-check form-switch">
+
     <input 
-      class="form-check-input" 
-      type="checkbox" 
-      role="switch" 
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
       id="taxSwitch"
     >
+
     <label class="form-check-label" for="taxSwitch">
       Display total before taxes
     </label>
+
   </div>
 </div>
+
 
 <!-- Listings Grid -->
 <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4">
@@ -56,13 +61,13 @@
 
     <div class="col">
 
-      <a href="/listings/<%= listing._id %>" class="text-dark listing-link">
+      <a href="/listings/<%= listing._id %>" class="listing-link">
 
         <div class="card listing-card h-100">
 
           <img 
-            src="<%= listing.image.url %>" 
-            class="card-img-top" 
+            src="<%= listing.image.url %>"
+            class="card-img-top"
             alt="listing_image"
           >
 
@@ -73,7 +78,7 @@
               <b><%= listing.title %></b><br>
 
               <span 
-                class="price" 
+                class="price"
                 data-price="<%= listing.price %>"
               >
                 &#8377;<%= listing.price.toLocaleString("en-IN") %>

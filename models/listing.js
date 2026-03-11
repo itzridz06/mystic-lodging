@@ -27,8 +27,16 @@ const listingSchema = new Schema({
   },
 
   price: Number,
+
   location: String,
+
   country: String,
+
+  /* ⭐ NEW FIELD */
+  category: {
+    type: String,
+    enum: ["rooms","mountains","beach","camping","city"],
+  },
 
   geometry: {
     type: {
