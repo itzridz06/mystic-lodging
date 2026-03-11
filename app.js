@@ -32,10 +32,7 @@ if(!dbUrl){
   console.log("ATLASDB_URL not found");
 }
 
-mongoose.connect(dbUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+mongoose.connect(dbUrl)
 .then(()=>{
     console.log("Connected to Atlas DB");
 })
