@@ -1,29 +1,162 @@
-const selector = document.getElementById("themeSelector");
+/* ===============================
+   DEFAULT THEME
+================================ */
 
-if(selector){
-  selector.addEventListener("change", function () {
-    const theme = this.value;
-
-    document.body.classList.remove(
-      "default",
-      "gryffindor",
-      "slytherin",
-      "ravenclaw",
-      "hufflepuff"
-    );
-
-    document.body.classList.add(theme);
-
-    localStorage.setItem("theme", theme);
-  });
+body.default {
+  background-color: #ffffff;
+  color: #000;
 }
 
-window.onload = () => {
-  const savedTheme = localStorage.getItem("theme") || "default";
+/* ===============================
+   GRYFFINDOR
+================================ */
 
-  document.body.classList.add(savedTheme);
+body.gryffindor {
+  background-color: #7f0909;
+  color: #ffc500;
+}
 
-  if(selector){
-    selector.value = savedTheme;
-  }
-};
+/* ===============================
+   SLYTHERIN
+================================ */
+
+body.slytherin {
+  background-color: #1a472a;
+  color: #e1ffe1;
+}
+
+/* ===============================
+   RAVENCLAW
+================================ */
+
+body.ravenclaw {
+  background-color: #0e1a40;
+  color: #d4af37;
+}
+
+/* ===============================
+   HUFFLEPUFF
+================================ */
+
+body.hufflepuff {
+  background-color: #ecb939;
+  color: #000;
+}
+
+/* ===============================
+   CONTAINER FIX
+================================ */
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* ===============================
+   CARDS
+================================ */
+
+.card {
+  background: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* keep cards white in all themes */
+
+body.gryffindor .card,
+body.slytherin .card,
+body.ravenclaw .card,
+body.hufflepuff .card {
+  background: #ffffff;
+  color: #000;
+}
+
+/* card images */
+
+.card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ===============================
+   FORMS (CREATE LISTING / REVIEW)
+================================ */
+
+form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* inputs */
+
+input,
+textarea,
+select {
+  background: #ffffff !important;
+  color: #000 !important;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+button,
+.btn {
+  border-radius: 8px;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* ===============================
+   MAP SECTION
+================================ */
+
+#map {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* ===============================
+   NAVBAR STABILITY
+================================ */
+
+.navbar {
+  background: #ffffff !important;
+}
+
+/* ===============================
+   REVIEW STARS VISIBILITY
+================================ */
+
+.starability-result {
+  filter: none;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+  background: #f5f5f5;
+}
+
+/* ===============================
+   SMOOTH THEME TRANSITION
+================================ */
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
