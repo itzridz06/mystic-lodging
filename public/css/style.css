@@ -272,15 +272,18 @@ body {
   border-radius: 10px;
 }
 
-/* Fix label color on auth pages (login/signup) */
+/* ===== AUTH PAGE FIX ===== */
 
-.auth-page label{
+.auth-page .form-label{
   color:#212529 !important;
   font-weight:500;
 }
 
-/* Optional: darker placeholder text */
-
-.auth-page input{
+.auth-page input,
+.auth-page textarea{
   color:#212529;
+}
+
+.auth-page .form-control{
+  border:1px solid #ced4da;
 }
