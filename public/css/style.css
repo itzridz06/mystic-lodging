@@ -272,18 +272,16 @@ body {
   border-radius: 10px;
 }
 
-/* ===== AUTH PAGE FIX ===== */
+/* AUTH PAGE LABEL FIX */
 
-.auth-page .form-label{
+body.auth-page .form-label{
   color:#212529 !important;
-  font-weight:500;
 }
 
-.auth-page input,
-.auth-page textarea{
-  color:#212529;
+body.auth-page label{
+  color:#212529 !important;
 }
 
-.auth-page .form-control{
-  border:1px solid #ced4da;
+body.auth-page input{
+  color:#212529 !important;
 }
