@@ -271,3 +271,16 @@ body {
   width: 100%;
   border-radius: 10px;
 }
+
+/* Fix label color on auth pages (login/signup) */
+
+.auth-page label{
+  color:#212529 !important;
+  font-weight:500;
+}
+
+/* Optional: darker placeholder text */
+
+.auth-page input{
+  color:#212529;
+}
