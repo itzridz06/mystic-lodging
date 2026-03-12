@@ -234,6 +234,24 @@ body {
   margin-top: 1rem;
 }
 
+/* Fix edit/delete alignment */
+
+.delete-form{
+  margin:0;
+}
+
+.btns{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:1rem;
+}
+
+.btn-danger,
+.btn-dark{
+  padding:6px 16px;
+  border-radius:8px;
+}
 /* Delete button fix */
 
 .btn-dark {

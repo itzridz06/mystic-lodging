@@ -32,7 +32,7 @@
      <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 <%= currUser ? currUser.house.toLowerCase() : '' %> <%= pageClass || '' %>">
 
   <%- include("../includes/navbar") %>
 <%- include("../includes/flash") %>

@@ -20,11 +20,14 @@ body.gryffindor {
    SLYTHERIN
 ================================ */
 
-body.slytherin {
+body.slytherin:not(.auth-page) {
   background-color: #1a472a;
   color: #e1ffe1;
 }
 
+.auth-page label {
+  color: #212529 !important;
+}
 /* ===============================
    RAVENCLAW
 ================================ */
