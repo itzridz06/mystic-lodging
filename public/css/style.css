@@ -283,3 +283,9 @@ body {
 .btn-dark:hover{
   background: rgba(0,0,0,0.1);
 }
+.delete-form{
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
