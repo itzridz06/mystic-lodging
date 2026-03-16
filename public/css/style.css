@@ -272,20 +272,6 @@ body {
   border-radius: 10px;
 }
 
-/* AUTH PAGE LABEL FIX */
-
-body.auth-page .form-label{
-  color:#212529 !important;
-}
-
-body.auth-page label{
-  color:#212529 !important;
-}
-
-body.auth-page input{
-  color:#212529 !important;
-}
-
 /* Delete button should follow theme */
 
 .btn-dark{

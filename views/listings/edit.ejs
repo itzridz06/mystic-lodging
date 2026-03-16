@@ -90,6 +90,29 @@
                 <div class="invalid-feedback">Location should be valid!</div>
             </div>
 
+            <!-- Category -->
+<div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+
+    <select name="listing[category]" class="form-control" required>
+
+        <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %>>Rooms</option>
+
+        <option value="Mountain" <%= listing.category === "Mountain" ? "selected" : "" %>>Mountain</option>
+
+        <option value="Beach" <%= listing.category === "Beach" ? "selected" : "" %>>Beach</option>
+
+        <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>Camping</option>
+
+        <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>Farms</option>
+
+        <option value="Trending" <%= listing.category === "Trending" ? "selected" : "" %>>Trending</option>
+
+    </select>
+
+    <div class="invalid-feedback">Please select a category!</div>
+</div>
+
             <!-- Edit Button -->
             <button class="btn btn-dark edit-btn mt-3">Edit</button>
 
